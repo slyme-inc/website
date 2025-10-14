@@ -1,26 +1,20 @@
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import homeBg from './assets/images/home.png'
+import Home from './pages/Home'
+import Services from './pages/Services'
+import ServicesCards from './pages/ServicesCards'
+import Products from './pages/Products'
+import Features from './pages/Features'
+import Contact from './pages/Contact'
 
 function App() {
 
   return (
-    <div className="relative">
-      {/* Background layer - outside container */}
-      <div className="fixed inset-0 -z-10 overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat hero-zoom"
-          style={{ backgroundImage: `url(${homeBg})` }}
-        />
-      </div>
-      
-      {/* Navbar - has its own container inside */}
-      <Navbar />
-      
-      {/* Main container with fixed width */}
-      <div className="main-container">
-        <Hero />
-      </div>
+    <div className="h-screen overflow-y-scroll snap-y snap-mandatory">
+      <Home />
+      <Services />
+      <ServicesCards />
+      <Products />
+      <Features />
+      <Contact />
     </div>
   )
 }
