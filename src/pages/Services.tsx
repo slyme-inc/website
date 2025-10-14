@@ -1,5 +1,4 @@
 import pageBg from '../assets/images/page-bg.png'
-import ArrowDown from '../icons/ArrowDown'
 import LogoSlider from '../components/LogoSlider'
 
 function Services() {
