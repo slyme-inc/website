@@ -27,13 +27,12 @@ function Features() {
   return (
     <>
       {/* On mobile: 2 cards per screen */}
-      <div className="md:hidden">
-        {[0, 2].map((startIndex) => (
-          <section 
-            key={startIndex}
-            id={`features-${startIndex === 0 ? 'first' : 'second'}`} 
-            className="relative h-screen snap-start snap-always"
-          >
+      {[0, 2].map((startIndex) => (
+        <section 
+          key={startIndex}
+          id={startIndex === 0 ? 'features-mobile' : 'features-second'} 
+          className="relative h-screen snap-start snap-always md:hidden"
+        >
             {/* Background layer */}
             <div className="absolute inset-0 -z-10 overflow-hidden">
               <div 
@@ -86,10 +85,9 @@ function Features() {
             </div>
           </section>
         ))}
-      </div>
 
       {/* On desktop: All 4 cards in one screen */}
-      <section className="relative h-screen snap-start snap-always hidden md:block">
+      <section id="features" className="relative h-screen snap-start snap-always hidden md:block">
         {/* Background layer */}
         <div className="absolute inset-0 -z-10 overflow-hidden">
           <div 

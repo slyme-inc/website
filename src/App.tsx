@@ -16,15 +16,6 @@ function App() {
         <ServicesCards />
         <Products />
         <Features />
-      </div>
-      
-      {/* Sections without snap scrolling (mobile only) */}
-      <div className="md:hidden">
-        <Contact />
-      </div>
-      
-      {/* Desktop version with snap scrolling */}
-      <div className="hidden md:block h-screen overflow-y-scroll snap-y snap-mandatory">
         <Contact />
       </div>
     </>
