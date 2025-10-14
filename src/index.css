@@ -8,8 +8,44 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Cooper Hewitt Light';
+  src: url('/fonts/cooper-hewitt.light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cooper Hewitt';
+  src: url('/fonts/cooper-hewitt.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cooper Hewitt Medium';
+  src: url('/fonts/cooper-hewitt.medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cooper Hewitt Bold';
+  src: url('/fonts/cooper-hewitt.bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme {
   --font-instrument: 'Instrument Serif', serif;
+  --font-cooper-light: 'Cooper Hewitt Light', sans-serif;
+  --font-cooper: 'Cooper Hewitt', sans-serif;
+  --font-cooper-medium: 'Cooper Hewitt Medium', sans-serif;
+  --font-cooper-bold: 'Cooper Hewitt Bold', sans-serif;
 }
 
 @keyframes zoomOut {
@@ -21,6 +57,25 @@
   }
 }
 
+@keyframes gapGrow {
+  from {
+    gap: 0.5rem;
+  }
+  to {
+    gap: 1.5rem;
+  }
+}
+
 .hero-zoom {
-  animation: zoomOut 1.5s ease-out forwards;
+  animation: zoomOut 0.5s ease-out forwards;
+}
+
+.gap-animate {
+  animation: gapGrow 0.5s ease-out forwards;
+}
+
+.main-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
