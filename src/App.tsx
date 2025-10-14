@@ -8,14 +8,26 @@ import Contact from './pages/Contact'
 function App() {
 
   return (
-    <div className="h-screen overflow-y-scroll snap-y snap-mandatory">
-      <Home />
-      <Services />
-      <ServicesCards />
-      <Products />
-      <Features />
-      <Contact />
-    </div>
+    <>
+      {/* Sections with snap scrolling */}
+      <div className="h-screen overflow-y-scroll snap-y snap-mandatory">
+        <Home />
+        <Services />
+        <ServicesCards />
+        <Products />
+        <Features />
+      </div>
+      
+      {/* Sections without snap scrolling (mobile only) */}
+      <div className="md:hidden">
+        <Contact />
+      </div>
+      
+      {/* Desktop version with snap scrolling */}
+      <div className="hidden md:block h-screen overflow-y-scroll snap-y snap-mandatory">
+        <Contact />
+      </div>
+    </>
   )
 }
 

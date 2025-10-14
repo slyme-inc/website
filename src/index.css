@@ -174,3 +174,12 @@
   animation: slide 30s linear infinite;
   width: max-content;
 }
+
+/* Mobile contact section without snap constraints */
+@media (max-width: 767px) {
+  #contact {
+    height: auto !important;
+    min-height: auto !important;
+    padding: 2rem 0;
+  }
+}
