@@ -112,10 +112,27 @@ html {
 }
 
 .glass-effect {
-  background: rgba(0, 0, 0, 0.15);
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
+  /* Base fallback */
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   position: relative;
+}
+
+/* Prefer stronger blur and saturation where supported */
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+  .glass-effect {
+    background: rgba(0, 0, 0, 0.15);
+    -webkit-backdrop-filter: saturate(180%) blur(10px);
+    backdrop-filter: saturate(180%) blur(6px);
+  }
+}
+
+/* Solid fallback when backdrop-filter isn't supported at all */
+@supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+  .glass-effect {
+    background: rgba(0, 0, 0, 0.45);
+  }
 }
 
 @keyframes borderRotate {
