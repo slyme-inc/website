@@ -27,7 +27,7 @@ function Features() {
   return (
     <>
       {/* Unified section: stacked on mobile, grid on desktop */}
-      <section id="features" className="relative min-h-screen md:h-screen md:snap-start md:snap-always">
+      <section id="features" className="relative min-h-screen md:h-screen md:snap-start md:snap-always pb-44 md:mb-0">
         {/* Background layer */}
         <div className="absolute inset-0 -z-10 overflow-hidden">
           <div 

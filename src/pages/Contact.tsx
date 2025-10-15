@@ -133,7 +133,9 @@ ${message}`
         </div>
         
         {/* Footer */}
+        <div className="mt-24 md:mt-0">
         <Footer />
+        </div>
       </div>
     </section>
   )
