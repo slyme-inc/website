@@ -9,8 +9,7 @@ function App() {
 
   return (
     <>
-      {/* Sections with snap scrolling */}
-      <div className="h-screen overflow-y-scroll md:snap-y md:snap-mandatory">
+      <div className="h-screen overflow-y-scroll">
         <Home />
         <Services />
         <ServicesCards />

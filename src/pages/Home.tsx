@@ -4,7 +4,7 @@ import homeBg from '../assets/images/home.png'
 
 function Home() {
   return (
-    <section id="home" className="relative min-h-screen md:h-screen md:snap-start md:snap-always">
+    <section id="home" className="relative min-h-screen md:h-screen">
       {/* Background layer */}
       <div className="fixed inset-0 -z-10 overflow-hidden">
         <div 

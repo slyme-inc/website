@@ -7,10 +7,10 @@ function ServicesCards() {
     {
       title: "Web Development",
       icon: webIcon,
-      description: "We craft modern, responsive web applications using cutting-edge technologies and best practices to deliver exceptional user experiences.",
+      description: "We craft modern, responsive web applications and custom business tools using cutting-edge technologies and best practices to deliver exceptional products and services.",
       highlights: [
         "Full-stack web application development",
-        "Custom CMS solutions",
+        "Custom SaaS and business tools",
         "Progressive Web Apps (PWA)",
         "API development and integration",
         "Performance optimization"
