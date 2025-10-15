@@ -27,7 +27,7 @@ ${message}`
   }
 
   return (
-    <section id="contact" className="relative h-screen snap-start snap-always">
+    <section id="contact" className="relative min-h-screen md:h-screen md:snap-start md:snap-always">
       {/* Background layer */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <div 

@@ -26,68 +26,8 @@ function Features() {
 
   return (
     <>
-      {/* On mobile: 2 cards per screen */}
-      {[0, 2].map((startIndex) => (
-        <section 
-          key={startIndex}
-          id={startIndex === 0 ? 'features-mobile' : 'features-second'} 
-          className="relative h-screen snap-start snap-always md:hidden"
-        >
-            {/* Background layer */}
-            <div className="absolute inset-0 -z-10 overflow-hidden">
-              <div 
-                className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                style={{ backgroundImage: `url(${pageBg})` }}
-              />
-            </div>
-
-            {/* Content */}
-            <div className="main-container h-full flex flex-col items-center justify-center p-6">
-              {/* Header - only show on first page */}
-              {startIndex === 0 && (
-                <div className="text-center mb-8">
-                  <p className="text-[#97ca4d] text-sm font-cooper-bold uppercase tracking-wider">
-                    WHY CHOOSE US
-                  </p>
-                  <h2 className="text-white text-3xl font-instrument font-bold mb-2">
-                    Better solutions for your business
-                  </h2>
-                  <p className="text-white/80 text-base font-cooper">
-                    We combine technical expertise with creative innovation to deliver exceptional results
-                  </p>
-                </div>
-              )}
-
-              {/* Features Grid - 2 cards */}
-              <div className="grid grid-cols-1 gap-4 w-full max-w-sm">
-                {features.slice(startIndex, startIndex + 2).map((feature, index) => (
-                  <div 
-                    key={startIndex + index}
-                    className="glass-effect card-hover rounded-2xl p-6 border border-white/10 flex flex-col transition-all duration-300"
-                  >
-                    {/* Icon */}
-                    <div className="text-3xl mb-3">
-                      {feature.icon}
-                    </div>
-
-                    {/* Title */}
-                    <h3 className="text-white text-lg font-instrument font-bold mb-2">
-                      {feature.title}
-                    </h3>
-
-                    {/* Description */}
-                    <p className="text-white/80 font-cooper text-sm leading-relaxed">
-                      {feature.description}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-        ))}
-
-      {/* On desktop: All 4 cards in one screen */}
-      <section id="features" className="relative h-screen snap-start snap-always hidden md:block">
+      {/* Unified section: stacked on mobile, grid on desktop */}
+      <section id="features" className="relative min-h-screen md:h-screen md:snap-start md:snap-always">
         {/* Background layer */}
         <div className="absolute inset-0 -z-10 overflow-hidden">
           <div 
@@ -99,32 +39,32 @@ function Features() {
         {/* Content */}
         <div className="main-container h-full flex flex-col items-center justify-center p-6">
           {/* Header */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-12 md:mb-16">
             <p className="text-[#97ca4d] text-sm font-cooper-bold uppercase tracking-wider mb-4">
               WHY CHOOSE US
             </p>
-            <h2 className="text-white text-4xl md:text-5xl font-instrument font-bold mb-6">
+            <h2 className="text-white text-3xl md:text-5xl font-instrument font-bold mb-6">
               Better solutions for your business
             </h2>
-            <p className="text-white/80 text-lg font-cooper max-w-2xl mx-auto">
+            <p className="text-white/80 text-base md:text-lg font-cooper max-w-2xl mx-auto">
               We combine technical expertise with creative innovation to deliver exceptional results
             </p>
           </div>
 
           {/* Features Grid */}
-          <div className="grid grid-cols-2 gap-6 w-full max-w-4xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl">
             {features.map((feature, index) => (
               <div 
                 key={index}
                 className="glass-effect card-hover rounded-2xl p-6 border border-white/10 flex flex-col transition-all duration-300"
               >
                 {/* Icon */}
-                <div className="text-4xl mb-4">
+                <div className="text-3xl md:text-4xl mb-3 md:mb-4">
                   {feature.icon}
                 </div>
 
                 {/* Title */}
-                <h3 className="text-white text-xl font-instrument font-bold mb-3">
+                <h3 className="text-white text-lg md:text-xl font-instrument font-bold mb-2 md:mb-3">
                   {feature.title}
                 </h3>
 

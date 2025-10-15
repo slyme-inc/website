@@ -3,7 +3,7 @@ import LogoSlider from '../components/LogoSlider'
 
 function Services() {
   return (
-    <section id="services" className="relative h-screen snap-start snap-always flex flex-col">
+    <section id="services" className="relative min-h-screen md:h-screen md:snap-start md:snap-always flex flex-col">
       {/* Background layer */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <div 
@@ -16,7 +16,7 @@ function Services() {
         {/* Main text centered vertically */}
         <div className="flex-1 flex flex-col justify-center items-center main-container">
           <p className="text-white text-4xl font-instrument text-center">
-            We offer cutting-edge solutions in <br/><span className="text-[#97ca4d]">web development</span> <br/> and <br/><span className="text-[#97ca4d]">mobile applications.</span>
+            We offer cutting-edge solutions in <br/><span className="text-[#97ca4d]">Web Development</span> <br/> and <br/><span className="text-[#97ca4d]">Mobile Applications.</span>
           </p>
 
           <div className="w-full mt-24">

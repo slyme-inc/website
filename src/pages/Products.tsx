@@ -12,7 +12,7 @@ function Products() {
   }
 
   return (
-    <section id="products" className="relative h-screen snap-start snap-always">
+    <section id="products" className="relative min-h-screen md:h-screen md:snap-start md:snap-always py-44 md:py-0">
       {/* Background layer */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <div 
